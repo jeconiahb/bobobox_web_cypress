@@ -45,4 +45,4 @@ class DropdownHelper {
     }
 }
 
-module.exports = DropdownHelper;
+export default DropdownHelper;

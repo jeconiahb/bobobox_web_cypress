@@ -17,4 +17,4 @@ class AlertHelper {
     }
 }
 
-module.exports = AlertHelper;
+export default AlertHelper;

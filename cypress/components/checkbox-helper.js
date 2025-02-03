@@ -28,4 +28,4 @@ class CheckboxHelper {
     }
 }
 
-module.exports = CheckboxHelper;
+export default CheckboxHelper;
