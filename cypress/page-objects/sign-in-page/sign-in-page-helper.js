@@ -9,29 +9,29 @@ import { LoginPageElement } from "./sign-in-page-element";
 const constant = new LoginPageConstant();
 const elem = LoginPageElement;
 
-export class LoginPageHelper {
+class LoginPageHelper {
     static navigate() {
-        Logger.helper('Open Login Page');
+        Logger.helper("Navigating to Login Page");
         PageHelper.navigate(constant.url);
     }
 
     static verifyUsernameTextboxIsVisible() {
-        Logger.helper('Verify username textbox in Login Page is visible');
+        Logger.helper("Verifying username textbox is visible on the Login Page");
         VerificationHelper.isVisible(elem.credentials.usernameTextbox);
     }
 
     static enterUsername(username) {
-        Logger.helper(`enter username as ${username}`);
+        Logger.helper(`Entering username: ${username}`);
         TextboxHelper.type(elem.credentials.usernameTextbox, username);
     }
 
     static enterPassword(password) {
-        Logger.helper(`enter password as ${password}`);
+        Logger.helper(`Entering password: ********`); // Jangan log password untuk keamanan
         TextboxHelper.type(elem.credentials.passwordTextbox, password);
     }
-    
+
     static clickLogin() {
-        Logger.helper(`click login`);
+        Logger.helper("Clicking the Login button");
         ElementHelper.click(elem.loginButton);
     }
 
@@ -41,36 +41,44 @@ export class LoginPageHelper {
     }
 
     static enterCredentialsAndClickLogin(username, password) {
-        this.enterUsername(username);
-        this.enterPassword(password);
+        this.enterCredential(username, password);
         this.clickLogin();
     }
 
     static enterValidCredentialAndLogin() {
-        const validUsername = constant.validCredentials.username;
-        const validPassword = constant.validCredentials.password;
-        this.enterCredentialsAndClickLogin(validUsername, validPassword);
+        Logger.helper("Logging in with valid credentials");
+        this.enterCredentialsAndClickLogin(
+            constant.validCredentials.username,
+            constant.validCredentials.password
+        );
     }
 
     static enterInvalidPassword() {
-        const validUsername = constant.validCredentials.username;
-        const invalidPassword = constant.invalidCredentials.password;
-        this.enterCredential(validUsername, invalidPassword);
+        Logger.helper("Attempting login with valid username and invalid password");
+        this.enterCredentialsAndClickLogin(
+            constant.validCredentials.username,
+            constant.invalidCredentials.password
+        );
     }
 
     static enterInvalidUsername() {
-        const invalidUsername = constant.invalidCredentials.username;
-        const validPassword = constant.validCredentials.password;
-        this.enterCredential(invalidUsername, validPassword);
+        Logger.helper("Attempting login with invalid username and valid password");
+        this.enterCredentialsAndClickLogin(
+            constant.invalidCredentials.username,
+            constant.validCredentials.password
+        );
     }
 
     static verifyAlertMessageForInvalidLogin() {
-        Logger.helper('Click Login and Verify message when Invalid Username/Password is provided');
+        Logger.helper("Verifying alert message for invalid login attempt");
         VerificationHelper.isVisible(elem.invalidLoginMessage);
     }
 
     static navigateToSiteAndLogin() {
+        Logger.helper("Navigating to site and logging in");
         this.navigate();
         this.enterValidCredentialAndLogin();
     }
 }
+
+export default LoginPageHelper;

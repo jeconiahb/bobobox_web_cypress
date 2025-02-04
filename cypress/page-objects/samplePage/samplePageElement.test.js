@@ -1,4 +1,4 @@
-export class DetailPageElement {
+export class SamplePageElement {
     static get credentials() {
         return {
             get usernameTextbox() {

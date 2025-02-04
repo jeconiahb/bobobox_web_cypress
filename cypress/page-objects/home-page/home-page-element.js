@@ -23,20 +23,26 @@ export class HomePageElement {
                 return '//label[contains(normalize-space(), "Check-in")]//following-sibling::div[contains(@class, "inline-flex items-center gap-3 py-1.5")]';
             },
             get durationDropdown() {
-                return '//input[@placeholder="Input your password here"]';
+                return '//label[contains(normalize-space(), "Duration")]//following-sibling::div[contains(@class, "w-full py-2 flex items-center justify-between gap-2")]';
             },
             get searchButton() {
-                return '//input[@placeholder="Input your password here"]';
+                return '//button[normalize-space()="Search"]';
             },
 
         };
     }
 
-    static get registerButton() {
-        return '//a[normalize-space()="Register"]';
+    static durationOption(duration) {
+        return `//li[contains(normalize-space(), "${duration} - Night(s)")]`;
     }
 
-    static get registerButton() {
-        return '//a[normalize-space()="Register"]';
+    static locationOption(location) {
+        return `//li[contains(normalize-space(), '${location}')]`;
     }
+
+    static closeButton() {
+        return "//div[@class='flex items-center justify-between']//*[name()='svg']";
+    }
+
+
 }
