@@ -2,10 +2,10 @@ export class LoginPageElement {
     static get credentials() {
         return {
             get usernameTextbox() {
-                return '//input[@placeholder="Input your email here"]';
+                return '//input[contains(@placeholder, "email")]';
             },
             get passwordTextbox() {
-                return '//input[@placeholder="Input your password here"]';
+                return '//input[contains(@placeholder, "password")]';
             }
         };
     }

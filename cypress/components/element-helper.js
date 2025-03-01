@@ -1,4 +1,5 @@
-/// <reference types='cypress-xpath' />
+import 'cypress-xpath';
+
 
 const Logger = require('./logger/logger.js');
 const VerificationHelper = require('./verification-helper.js');

@@ -1,6 +1,6 @@
 export class LoginPageConstant {
     constructor() {
-        this.url = '';
+        this.url = 'https://boboboxservice.com/';
 
         // this.invalidLoginMessage = 'These credentials do not match our records.';
 

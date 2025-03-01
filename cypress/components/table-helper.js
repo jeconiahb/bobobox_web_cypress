@@ -1,4 +1,4 @@
-/// <reference types='cypress-xpath' />
+import 'cypress-xpath';
 
 import { ElementHelper } from './element-helper';
 import { VerificationHelper } from './verification-helper';

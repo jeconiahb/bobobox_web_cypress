@@ -1,4 +1,4 @@
-/// <reference types='cypress-xpath' />
+import 'cypress-xpath';
 
 class AlertHelper {
     /**
