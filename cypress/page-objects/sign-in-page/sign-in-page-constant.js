@@ -5,8 +5,8 @@ export class LoginPageConstant {
         // this.invalidLoginMessage = 'These credentials do not match our records.';
 
         this.validCredentials = Object.freeze({
-            username: 'automation@mailinator.com',
-            password: '123123123',
+            username: 'jeki@mail.com',
+            password: 'Password1',
         });
 
         this.invalidCredentials = Object.freeze({

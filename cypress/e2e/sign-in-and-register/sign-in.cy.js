@@ -9,20 +9,26 @@ describe('C-1: User should be able to login with correct credentials', () => {
 
     it ('1: Login Test Case - Login with invalid credentials', () => {
         Logger.stepNumber(1)
-        Logger.stepAction('Enter incorrect username and password ')
-        // HomePageHelper.verifyLogin();
+        Logger.stepAction('Go to login page')
+        HomePageHelper.verifyLogin();
         HomePageHelper.clickLogin();
         LoginPageHelper.verifyUsernameTextboxIsVisible();
+
+        Logger.stepNumber(2)
+        Logger.stepAction('Enter invalid credentials')
         LoginPageHelper.enterInvalidUsername();
         LoginPageHelper.enterInvalidPassword();
     })
 
     it ('2: Login Test Case - Login with valid credentials', () => {
         Logger.stepNumber(1)
-        Logger.stepAction('Enter incorrect username and password ')
+        Logger.stepAction('Go to login page')
         HomePageHelper.verifyLogin();
         HomePageHelper.clickLogin();
         LoginPageHelper.verifyUsernameTextboxIsVisible();
+        
+        Logger.stepNumber(2)
+        Logger.stepAction('Enter invalid credentials')
         LoginPageHelper.enterValidCredentialAndLogin();
     })
 });
