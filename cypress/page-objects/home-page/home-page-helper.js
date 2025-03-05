@@ -1,6 +1,7 @@
 import ElementHelper from "../../components/element-helper";
 import Logger from "../../components/logger/logger";
 import { VerificationHelper } from "../../components/verification-helper";
+import { WaitHelper } from "../../components/wait-helper";
 import HomePageConstant from "./home-page-constant";
 import { HomePageElement } from "./home-page-element";
 
@@ -116,6 +117,17 @@ class HomePageHelper {
     static clickCloseButton() {
         Logger.helper("Clicking the Close button");
         ElementHelper.click(elem.closeButton);
+    }
+
+    static bookCabin(location) {
+        Logger.helper("Attempting to open pod/cabin detail page");
+        this.verifyCabinButton();
+        this.clickCabinButton();
+        this.verifyLocation();
+        this.clickLocation();
+        this.clickLocationOption(location);
+        WaitHelper.wait();
+        this.clickSearchButton();
     }
 }
 

@@ -3,6 +3,7 @@ import Logger from "../../components/logger/logger";
 import PageHelper from "../../components/page-helper";
 import { TextboxHelper } from "../../components/textbox-helper";
 import { VerificationHelper } from "../../components/verification-helper";
+import HomePageHelper from "../home-page/home-page-helper";
 import { LoginPageConstant } from "./sign-in-page-constant";
 import { LoginPageElement } from "./sign-in-page-element";
 
@@ -26,7 +27,7 @@ class LoginPageHelper {
     }
 
     static enterPassword(password) {
-        Logger.helper(`Entering password: ********`); // Jangan log password untuk keamanan
+        Logger.helper(`Entering password: ********`); 
         TextboxHelper.type(elem.credentials.passwordTextbox, password);
     }
 
@@ -77,6 +78,8 @@ class LoginPageHelper {
     static navigateToSiteAndLogin() {
         Logger.helper("Navigating to site and logging in");
         this.navigate();
+        HomePageHelper.verifyLogin();
+        HomePageHelper.clickLogin();
         this.enterValidCredentialAndLogin();
     }
 }

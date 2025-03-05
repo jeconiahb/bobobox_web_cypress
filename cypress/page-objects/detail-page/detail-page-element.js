@@ -20,6 +20,8 @@ export class DetailPageElement {
         // return "//button[@class='inline-flex items-center justify-center px-4 py-2 font-semibold focus:outline-none focus-visible:ring focus-visible:ring-pelarous-60 shadow-sm transition-colors duration-75 bg-pelarous-60 border border-pelarous-60 hover:bg-pelarous-80 hover:text-white active:bg-pelarous-50 disabled:border-none disabled:bg-pelarous-60/50 disabled:text-chalky-10 h-12 disabled:cursor-not-allowed bold-14 float-right mt-4 w-32 rounded-lg text-white']";
     }
 
+    
+
 
     // static get invalidLoginMessage() {
     //     return '//div[@role="alert"]';

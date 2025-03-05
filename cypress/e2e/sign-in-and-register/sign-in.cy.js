@@ -2,7 +2,7 @@ import Logger from "../../components/logger/logger";
 import HomePageHelper from "../../page-objects/home-page/home-page-helper";
 import LoginPageHelper from "../../page-objects/sign-in-page/sign-in-page-helper";
 
-describe('C-1: User should be able to login with correct credentials', () => {
+describe('User should be able to login with correct credentials', () => {
     beforeEach('Precondition - Navigate to Site', () => {
         LoginPageHelper.navigate()
     });
