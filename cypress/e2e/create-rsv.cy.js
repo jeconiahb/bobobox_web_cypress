@@ -1,4 +1,5 @@
 import Logger from "../components/logger/logger";
+import DetailPageHelper from "../page-objects/detail-page/detail-page-helper";
 import HomePageConstant from "../page-objects/home-page/home-page-constant";
 import HomePageHelper from "../page-objects/home-page/home-page-helper";
 import LoginPageHelper from "../page-objects/sign-in-page/sign-in-page-helper";
@@ -17,6 +18,6 @@ describe('User should be able to create a reservation', () => {
 
         Logger.stepNumber(2)
         Logger.stepAction('See rooms and chose 1 room')
-        
+        DetailPageHelper.selectStandardCabin();
     })
 });
