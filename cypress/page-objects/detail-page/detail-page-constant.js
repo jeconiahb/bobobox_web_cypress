@@ -12,8 +12,8 @@
         });
 
         this.cabin = Object.freeze({
-            standar: 'Standar Cabin',
-            standarBf: 'Standar Cabin with Breakfast',
+            Standard: 'Standard Cabin',
+            StandardBf: 'Standard Cabin with Breakfast',
             deluxe: 'Deluxe Cabin',
             deluxeBf: 'Deluxe Cabin with Breakfast',
             deluxeHt: 'Deluxe Cabin Hot Tub',
