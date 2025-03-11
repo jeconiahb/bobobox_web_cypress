@@ -12,7 +12,7 @@ export class PaymentPageElement {
                 const root = "//a[normalize-space()='E-money']";
                 return {
                     root,
-                    option: (payment) => `${root}//label[@for='${payment}']`
+                    option: (payment) => `//label[@for='${payment}']`
                 };
             },
             get creditCard() {
@@ -31,24 +31,24 @@ export class PaymentPageElement {
     static get continuePaymentBtn() {
         return "//button[contains(text(), 'Continue Payment')]";
     }
-
+    
     static get backToRoomBtn() {
         return "//div[contains(@class, 'cursor-pointer shadow')][contains(text(), 'Back to select rooms')]";
     }
 
-    static paymentMethod(payment) {
-        return `//a[normalize-space()='${payment}']`
+    static get payBtn(){
+        return "//div[contains(@class, 'col-12')]/button[contains(@class, 'btn-block')]"
     }
-
-    static paymentSelect(payment) {
-        return `//label[@for='${payment}']`
+    
+    static get tncCheck() {
+        return "//input[@id='tnc-check']"
     }
-
-    static payBtn(){
-        return "//button[contains(@class, 'btn-block bbx-mt-1 btn bbx-btn__high px-4 bbx-text__700 btn-bbx-payment')]"
+    
+    static get continuePaymentTncBtn() {
+        return "//button[contains(@class, 'btn-bbx-payment')]//span[contains(text(), 'Continue')]";
     }
-
-    // static get invalidLoginMessage() {
-    //     return '//div[@role="alert"]';
-    // }
+    
+    static get xenditProceedBtn() {
+        return "//button[@id='proceed-button']";
+    }
 }

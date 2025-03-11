@@ -23,5 +23,9 @@ export class ScrollHelper {
         // Pastikan elemen terlihat setelah scroll
         cy.xpath(element).should('be.visible');
     }
+
+    static toBottom() {
+        cy.scrollTo('bottom');
+    }
 }
 

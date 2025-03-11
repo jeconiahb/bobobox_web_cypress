@@ -1,12 +1,30 @@
 export class RegisterPageElement {
     static get credentials() {
         return {
-            get usernameTextbox() {
+            get fullnameTextbox() {
+                return '//input[@placeholder="Input your email here"]';
+            },
+            get emailTextbox() {
+                return '//input[@placeholder="Input your password here"]';
+            },
+            get phoneTextbox() {
+                return '//input[@placeholder="Input your email here"]';
+            },
+            get dob() {
+                return '//input[@placeholder="Input your password here"]';
+            },
+            get gender() {
                 return '//input[@placeholder="Input your email here"]';
             },
             get passwordTextbox() {
                 return '//input[@placeholder="Input your password here"]';
-            }
+            },
+            get tncBox() {
+                return '//input[@placeholder="Input your email here"]';
+            },
+            get pnBox() {
+                return '//input[@placeholder="Input your password here"]';
+            },
         };
     }
 

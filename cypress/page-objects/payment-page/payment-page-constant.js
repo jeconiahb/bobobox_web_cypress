@@ -1,8 +1,6 @@
-export class SamplePageConstant {
+export class PaymentPageConstant {
     constructor() {
         this.url = '';
-
-        // this.invalidLoginMessage = 'These credentials do not match our records.';
 
         this.method = Object.freeze({
             virtualAcount: "Virtual Account",
